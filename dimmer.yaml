@@ -5,19 +5,19 @@ substitutions:
 esphome:
   name: '${name}'
   friendly_name: '${friendly_name}'
-  name_add_mac_suffix: true
+  name_add_mac_suffix: false
   project:
     name: boneio.dimmer24
-    version: '0.1'
+    version: '0.2'
 packages:
-  core: github://pszafer/dimm-template/common/core.yaml@v1
-  misc: github://pszafer/dimm-template/common/misc.yaml@v1
-  output: github://pszafer/dimm-template/common/output.yaml@v1
+  core: github://pszafer/dimm-template/common/core.yaml@v5
+  misc: github://pszafer/dimm-template/common/misc.yaml@v5
+  output: github://pszafer/dimm-template/common/output.yaml@v5
 
 web_server:
 
 dashboard_import:
-  package_import_url: github://pszafer/dimm-template/dimmer.yaml@v4
+  package_import_url: github://pszafer/dimm-template/dimmer.yaml@v5
   import_full_config: true
 
 binary_sensor:
