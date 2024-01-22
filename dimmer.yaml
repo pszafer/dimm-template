@@ -10,14 +10,14 @@ esphome:
     name: boneio.dimmer24
     version: '0.1'
 packages:
-  core: !include common/core.yaml
-  misc: !include common/misc.yaml
-  output: !include common/output.yaml
+  core: github://pszafer/dimm-template/common/core.yaml@v1
+  misc: github://pszafer/dimm-template/common/misc.yaml@v1
+  output: github://pszafer/dimm-template/common/output.yaml@v1
 
 web_server:
 
 dashboard_import:
-  package_import_url: github://pszafer/dimm-template/dimmer.yaml@v1
+  package_import_url: github://pszafer/dimm-template/dimmer.yaml@v2
   import_full_config: true
 
 binary_sensor:
