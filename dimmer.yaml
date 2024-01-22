@@ -1,0 +1,107 @@
+substitutions:
+  name: 'boneio-dimmer'
+  friendly_name: BoneIO Dimmer LED
+
+esphome:
+  name: '${name}'
+  friendly_name: '${friendly_name}'
+  name_add_mac_suffix: true
+  project:
+    name: boneio.dimmer24
+    version: '0.1'
+packages:
+  core: !include common/core.yaml
+  misc: !include common/misc.yaml
+  output: !include common/output.yaml
+
+web_server:
+
+dashboard_import:
+  package_import_url: github://pszafer/dimm-template/dimmer.yaml@v1
+  import_full_config: true
+
+binary_sensor:
+  - platform: gpio
+    name: 'IN_1'
+    pin:
+      number: 35
+      mode:
+        input: true
+      inverted: true
+  - platform: gpio
+    name: 'IN_2'
+    pin:
+      number: 34
+      mode:
+        input: true
+      inverted: true
+  - platform: gpio
+    name: 'IN_3'
+    pin:
+      number: 39
+      mode:
+        input: true
+      inverted: true
+  - platform: gpio
+    name: 'IN_4'
+    pin:
+      number: 36
+      mode:
+        input: true
+      inverted: true
+
+light:
+  - platform: monochromatic
+    output: led01
+    name: 'LED 01'
+    id: led_1
+    default_transition_length: 2s
+  - platform: monochromatic
+    output: led02
+    name: 'LED 02'
+    id: led_2
+    default_transition_length: 2s
+  - platform: monochromatic
+    output: led03
+    name: 'LED 03'
+    id: led_3
+    default_transition_length: 2s
+  - platform: monochromatic
+    output: led04
+    name: 'LED 04'
+    id: led_4
+    default_transition_length: 2s
+
+  - platform: monochromatic
+    output: led05
+    name: 'LED 05'
+    id: led_5
+    default_transition_length: 2s
+  - platform: monochromatic
+    output: led06
+    name: 'LED 06'
+    id: led_6
+    default_transition_length: 2s
+  - platform: monochromatic
+    output: led07
+    name: 'LED 07'
+    id: led_7
+    default_transition_length: 2s
+  - platform: monochromatic
+    output: led08
+    name: 'LED 08'
+    id: led_8
+    default_transition_length: 2s
+
+  - platform: neopixelbus
+    type: GRB
+    variant: WS2812
+    pin: 4
+    num_leds: 10
+    name: 'NeoPixel01'
+  - platform: neopixelbus
+    type: GRB
+    variant: WS2812
+    pin: 5
+    num_leds: 10
+    name: 'NeoPixel02'

@@ -1,0 +1,42 @@
+output:
+  - platform: ledc
+    pin: 2
+    frequency: 100 Hz
+    inverted: false
+    id: led01
+  - platform: ledc
+    pin: 17
+    frequency: 100 Hz
+    inverted: false
+    id: led02
+  - platform: ledc
+    pin: 15
+    frequency: 100 Hz
+    inverted: false
+    id: led03
+  - platform: ledc
+    pin: 13
+    frequency: 100 Hz
+    inverted: false
+    id: led04
+
+  - platform: ledc
+    pin: 12
+    frequency: 100 Hz
+    inverted: false
+    id: led05
+  - platform: ledc
+    pin: 14
+    frequency: 100 Hz
+    inverted: false
+    id: led06
+  - platform: ledc
+    pin: 33
+    frequency: 100 Hz
+    inverted: false
+    id: led07
+  - platform: ledc
+    pin: 32
+    frequency: 100 Hz
+    inverted: false
+    id: led08
